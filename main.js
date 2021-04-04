@@ -8,12 +8,12 @@ const totalByNumber4 = document.getElementById("totalByNumber4");
 const totalByNumber5 = document.getElementById("totalByNumber5");
 const totalByNumber6 = document.getElementById("totalByNumber6");
 
-const roll1 = document.getElementById("roll1");
-const roll2 = document.getElementById("roll2");
-const roll3 = document.getElementById("roll3");
-const roll4 = document.getElementById("roll4");
-const roll5 = document.getElementById("roll5");
-const roll6 = document.getElementById("roll6");
+const roll1img = document.getElementById("roll1img");
+const roll2img = document.getElementById("roll2img");
+const roll3img = document.getElementById("roll3img");
+const roll4img = document.getElementById("roll4img");
+const roll5img = document.getElementById("roll5img");
+const roll6img = document.getElementById("roll6img");
 
 let row1q = 3;
 let row2q = 3;
@@ -60,26 +60,26 @@ const roll = ( row ) => {
     switch ( row ){
         case 1:
             if(randomList.length < 2){
-                roll1.innerText = randomList[0];
+                roll1img.src = "sprites/Sprite-000" + randomList[0] + ".png";
             } else if (randomList.length < 3){
-                roll1.innerText = randomList[0];
-                roll2.innerText = randomList[1];
+                roll1img.src = "sprites/Sprite-000" + randomList[0] + ".png";
+                roll2img.src = "sprites/Sprite-000" + randomList[1] + ".png";
             } else if(randomList.length < 4){
-                roll1.innerText = randomList[0];
-                roll2.innerText = randomList[1];
-                roll3.innerText = randomList[2];
+                roll1img.src = "sprites/Sprite-000" + randomList[0] + ".png";
+                roll2img.src = "sprites/Sprite-000" + randomList[1] + ".png";
+                roll3img.src = "sprites/Sprite-000" + randomList[2] + ".png";
             }
             break;
         case 2:
             if(randomList.length < 2){
-                roll4.innerText = randomList[0];
+                roll4img.src = "sprites/Sprite-000" + randomList[0] + ".png";
             } else if(randomList.length < 3){
-                roll4.innerText = randomList[0];
-                roll5.innerText = randomList[1];
+                roll4img.src = "sprites/Sprite-000" + randomList[0] + ".png";
+                roll5img.src = "sprites/Sprite-000" + randomList[1] + ".png";
             } else if(randomList.length < 4){
-                roll4.innerText = randomList[0];
-                roll5.innerText = randomList[1];
-                roll6.innerText = randomList[2];
+                roll4img.src = "sprites/Sprite-000" + randomList[0] + ".png";
+                roll5img.src = "sprites/Sprite-000" + randomList[1] + ".png";
+                roll6img.src = "sprites/Sprite-000" + randomList[2] + ".png";
             }
             break;
     }
@@ -88,24 +88,24 @@ const roll = ( row ) => {
 
 const disableRolls = ( row, value ) => {
     if ( row === 1 ) {
-        roll1.hidden = true;
-        roll2.hidden = true;
-        roll3.hidden = true;
+        roll1img.hidden = true;
+        roll2img.hidden = true;
+        roll3img.hidden = true;
 
         switch ( value ) {
             case 1:
-                roll1.hidden = false;
+                roll1img.hidden = false;
                 row1q = 1;
                 break;
             case 2:
-                roll1.hidden = false;
-                roll2.hidden = false;
+                roll1img.hidden = false;
+                roll2img.hidden = false;
                 row1q = 2;
                 break;
             case 3:
-                roll1.hidden = false;
-                roll2.hidden = false;
-                roll3.hidden = false;
+                roll1img.hidden = false;
+                roll2img.hidden = false;
+                roll3img.hidden = false;
                 row1q = 3;
                 break;
         }
@@ -113,24 +113,24 @@ const disableRolls = ( row, value ) => {
     }
 
     if ( row === 2 ) {
-        roll4.hidden = true;
-        roll5.hidden = true;
-        roll6.hidden = true;
+        roll4img.hidden = true;
+        roll5img.hidden = true;
+        roll6img.hidden = true;
 
         switch ( value ) {
             case 1:
-                roll4.hidden = false;
+                roll4img.hidden = false;
                 row2q = 1;
                 break;
             case 2:
-                roll4.hidden = false;
-                roll5.hidden = false;
+                roll4img.hidden = false;
+                roll5img.hidden = false;
                 row2q = 2;
                 break;
             case 3:
-                roll4.hidden = false;
-                roll5.hidden = false;
-                roll6.hidden = false;
+                roll4img.hidden = false;
+                roll5img.hidden = false;
+                roll6img.hidden = false;
                 row2q = 3;
                 break;
         }
@@ -191,25 +191,25 @@ const animateRolls = ( row ) => {
     
     if ( row === 1) {
 
-        btnRoll1.className = "btn btnRoll col-12 mb-2 btn-danger";
-        roll1.innerText = "";
-        roll2.innerText = "";
-        roll3.innerText = "";
+        btnRoll1.className = "btn btn-danger btnRoll col-12 mb-2 p-1 pt-4";
+        roll1img.src = "";
+        roll2img.src = "";
+        roll3img.src = "";
         
         setTimeout(() => {
-            btnRoll1.className = "btn btnRoll col-12 mb-2 btn-info";
+            btnRoll1.className = "btn btn-success btnRoll col-12 mb-2 p-1 pt-4";
             roll( row );
         }, 1000);
 
     } else {
 
-        btnRoll2.className = "btn btnRoll col-12 mb-2 btn-danger";
-        roll4.innerText = "";
-        roll5.innerText = "";
-        roll6.innerText = "";
+        btnRoll2.className = "btn btn-danger btnRoll col-12 mb-2 p-1 pt-4";
+        roll4img.src = "";
+        roll5img.src = "";
+        roll6img.src = "";
 
         setTimeout(() => {
-            btnRoll2.className = "btn btnRoll col-12 mb-2 btn-info";
+            btnRoll2.className = "btn btn-success btnRoll col-12 mb-2 p-1 pt-4";
             roll( row );
         }, 1000);
 
