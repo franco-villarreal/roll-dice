@@ -142,7 +142,7 @@ const disableRolls = ( row, value ) => {
 const orderRolls = ( row ) => {
     let orderedRoll = [];
     if( row.length < 2){
-        orderedRoll = row[0];
+        orderedRoll[0] = row[0];
     } else if( row.length < 3){
         orderedRoll = [ 0, 0 ];
         for (let i=0; i<row.length; i++){
@@ -177,12 +177,12 @@ const counter = ( number ) => {
 
     totalByNumber[ number - 1] ++;
     totalTry.innerText = "Total = " + total;
-    totalByNumber1.innerText = "1 = " + ((totalByNumber[1 - 1]*100)/total) + " %";
-    totalByNumber2.innerText = "2 = " + ((totalByNumber[2 - 1]*100)/total) + " %";
-    totalByNumber3.innerText = "3 = " + ((totalByNumber[3 - 1]*100)/total) + " %";
-    totalByNumber4.innerText = "4 = " + ((totalByNumber[4 - 1]*100)/total) + " %";
-    totalByNumber5.innerText = "5 = " + ((totalByNumber[5 - 1]*100)/total) + " %";
-    totalByNumber6.innerText = "6 = " + ((totalByNumber[6 - 1]*100)/total) + " %";
+    totalByNumber1.innerText = "1 = " + ((totalByNumber[1 - 1]*100)/total).toFixed(1) + " %";
+    totalByNumber2.innerText = "2 = " + ((totalByNumber[2 - 1]*100)/total).toFixed(1) + " %";
+    totalByNumber3.innerText = "3 = " + ((totalByNumber[3 - 1]*100)/total).toFixed(1) + " %";
+    totalByNumber4.innerText = "4 = " + ((totalByNumber[4 - 1]*100)/total).toFixed(1) + " %";
+    totalByNumber5.innerText = "5 = " + ((totalByNumber[5 - 1]*100)/total).toFixed(1) + " %";
+    totalByNumber6.innerText = "6 = " + ((totalByNumber[6 - 1]*100)/total).toFixed(1) + " %";
 
 };
 
