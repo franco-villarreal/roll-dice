@@ -1,3 +1,7 @@
+body {
+    color: white;
+    background: black;
+}
 .roll {
     margin-bottom: 5px;
     max-width: 100px;
@@ -8,12 +12,15 @@
 
 .btnQ {
     margin-bottom: 5px;
+    max-width: 45px;
     height: 100px;
     display: block;
 }
 
 .btnRoll {
-    /* max-width: 100px; */
+    max-width: 150px;
+    height: 100px;
+    font-size: 50px;
 }
 
 /* .roll:hover {

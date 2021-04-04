@@ -1,17 +1,19 @@
 <html>
     <head>
         <title>Roll-Dick</title>
-        
+
+        <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
         <link rel="stylesheet" href="./styles.css">
     </head>
 
     <body>
-        <div class="container mt-5">
+        <div class="container mt-5 ml-2">
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-6">
 
                     <div class="row">
                         <div class="btn btn-info btnRoll col-11 mb-2" id="btnRoll" onclick="roll(1);">
@@ -21,23 +23,23 @@
 
                     <div class="row">
                         <div class="btn btn-danger btnQ mb-1 col-4" onclick="disableRolls(1, 1);"></div>
-                        <div class="btn btn-dark roll ml-1 col-8" id="roll1"></div>
+                        <div class="btn btn-light roll ml-1 col-8" id="roll1"></div>
                     </div>
 
                     <div class="row">
                         <div class="btn btn-danger btnQ mb-1 col-4" onclick="disableRolls(1, 2);"></div>
-                        <div class="btn btn-dark roll ml-1 col-8" id="roll2"></div>
+                        <div class="btn btn-light roll ml-1 col-8" id="roll2"></div>
                     </div>
 
                     <div class="row">
                         <div class="btn btn-danger btnQ mb-1 col-4" onclick="disableRolls(1, 3);"></div>
-                        <div class="btn btn-dark roll ml-1 col-8" id="roll3"></div>
+                        <div class="btn btn-light roll ml-1 col-8" id="roll3"></div>
                     </div>
 
                     
                 </div>
 
-                <div class="col-3">
+                <div class="col-6">
 
                     <div class="row">
                         <div class="btn btn-info btnRoll col-11 mb-2" id="btnRoll" onclick="roll(2);">
@@ -48,21 +50,31 @@
 
                     <div class="row">
                         <div class="btn btn-danger btnQ mb-1 col-4" onclick="disableRolls(2, 1);"></div>
-                        <div class="btn btn-dark roll ml-1 col-8" id="roll4"></div>
+                        <div class="btn btn-light roll ml-1 col-8" id="roll4"></div>
                     </div>
 
                     <div class="row">
                         <div class="btn btn-danger btnQ mb-1 col-4" onclick="disableRolls(2, 2);"></div>
-                        <div class="btn btn-dark roll ml-1 col-8" id="roll5"></div>
+                        <div class="btn btn-light roll ml-1 col-8" id="roll5"></div>
                     </div>
 
                     <div class="row">
                         <div class="btn btn-danger btnQ mb-1 col-4" onclick="disableRolls(2, 3);"></div>
-                        <div class="btn btn-dark roll ml-1 col-8" id="roll6"></div>
+                        <div class="btn btn-light roll ml-1 col-8" id="roll6"></div>
                     </div>
 
                     
                 </div>
+            </div>
+
+            <div>
+                <p id="total"></p>
+                <p id="totalByNumber1"></p>
+                <p id="totalByNumber2"></p>
+                <p id="totalByNumber3"></p>
+                <p id="totalByNumber4"></p>
+                <p id="totalByNumber5"></p>
+                <p id="totalByNumber6"></p>
             </div>
 
         </div>
