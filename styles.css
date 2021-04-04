@@ -4,21 +4,20 @@ body {
 }
 .roll {
     margin-bottom: 5px;
-    max-width: 100px;
+    /* max-width: 100px; */
     height: 100px;
     font-size: 50px;
     display: block;
 }
 
 .btnQ {
-    margin-bottom: 5px;
-    max-width: 45px;
+    /* max-width: 45px; */
     height: 100px;
     display: block;
 }
 
 .btnRoll {
-    max-width: 150px;
+    /* max-width: 150px; */
     height: 100px;
     font-size: 50px;
 }
