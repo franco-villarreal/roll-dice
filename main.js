@@ -1,4 +1,5 @@
-const btnRoll = document.getElementById("btnRoll");
+const btnRoll1 = document.getElementById("btnRoll1");
+const btnRoll2 = document.getElementById("btnRoll2");
 const totalTry = document.getElementById("total");
 const totalByNumber1 = document.getElementById("totalByNumber1");
 const totalByNumber2 = document.getElementById("totalByNumber2");
@@ -184,6 +185,36 @@ const counter = ( number ) => {
     totalByNumber5.innerText = "5 = " + ((totalByNumber[5 - 1]*100)/total).toFixed(1) + " %";
     totalByNumber6.innerText = "6 = " + ((totalByNumber[6 - 1]*100)/total).toFixed(1) + " %";
 
+};
+
+const animateRolls = ( row ) => {
+    
+    if ( row === 1) {
+
+        btnRoll1.className = "btn btnRoll col-12 mb-2 btn-danger";
+        roll1.innerText = "";
+        roll2.innerText = "";
+        roll3.innerText = "";
+        
+        setTimeout(() => {
+            btnRoll1.className = "btn btnRoll col-12 mb-2 btn-info";
+            roll( row );
+        }, 1000);
+
+    } else {
+
+        btnRoll2.className = "btn btnRoll col-12 mb-2 btn-danger";
+        roll4.innerText = "";
+        roll5.innerText = "";
+        roll6.innerText = "";
+
+        setTimeout(() => {
+            btnRoll2.className = "btn btnRoll col-12 mb-2 btn-info";
+            roll( row );
+        }, 1000);
+
+    }    
+    
 };
 
 roll(1);
